@@ -330,7 +330,7 @@ langfuse:
     url: http://localhost:3000
     # -- Used to encrypt the NextAuth.js JWT, and to hash email verification tokens. Can be configured by value or existing secret reference.
     secret:
-      value: ""
+      value: "cO+7aZpifHDyW+GeMU1NtIV5H1xuPQgRqQQMjhjQxPI="
       secretKeyRef:
         name: ""
         key: ""
