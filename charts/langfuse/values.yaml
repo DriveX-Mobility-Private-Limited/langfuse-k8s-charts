@@ -17,7 +17,7 @@ langfuse:
 
   # -- Used to hash API keys. Can be configured by value or existing secret reference. To generate a new salt, run `openssl rand -base64 32`.
   salt:
-    value: ""
+    value: "Maui+i3UZCgGWFPhYVEqun2qe/OQCA2a4yl1V8Gsmec="
     secretKeyRef:
       name: ""
       key: ""
