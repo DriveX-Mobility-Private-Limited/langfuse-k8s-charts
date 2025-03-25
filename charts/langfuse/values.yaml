@@ -58,26 +58,29 @@ langfuse:
     name: ""
   ingress:
     # -- Set to `true` to enable the ingress resource
-    enabled: false
+    enabled: true
     # -- Additional labels for the ingress resource
     additionalLabels: {}
     # -- Annotations for the ingress resource
-    annotations: {}
+    annotations:
+      kubernetes.io/ingress.class: nginx
+      kubernetes.io/tls-acme: "true"
+      cert-manager.io/cluster-issuer: letsencrypt-dev
+      nginx.ingress.kubernetes.io/use-forwarded-headers: "true"
     # -- The class name for the ingress resource
     className: ""
     # -- The hosts for the ingress resource
-    hosts: []
-    # Example:
-    # - host: "langfuse.example.com"
-    #   paths:
-    #     - path: /
-    #       pathType: ImplementationSpecific
+    hosts:
+    - host: "llmmetrics.drivex.dev"
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
 
     tls:
       # -- Set to `true` to enable use HTTPS on the ingress
-      enabled: false
+      enabled: true
       # -- The name of the secret to use for TLS Key
-      secretName: ""
+      secretName: "langfuse-dev-tls"
 
   # -- Pod security context for all langfuse deployments
   podSecurityContext: {}
