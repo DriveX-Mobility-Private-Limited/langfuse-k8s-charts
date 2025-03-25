@@ -465,7 +465,7 @@ clickhouse:
 # S3/MinIO Configuration
 s3:
   # -- Enable MinIO deployment (via Bitnami Helm Chart). If you want to use a custom BlobStorage, e.g. S3, set to false.
-  deploy: true
+  deploy: false
 
   # -- S3 bucket to use for all uploads. Can be overridden per upload type.
   bucket: ""
