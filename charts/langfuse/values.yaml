@@ -9,6 +9,16 @@ fullnameOverride: ""
 
 # Core Langfuse Configuration
 langfuse:
+  worker:
+    keda:
+      enabled: false
+    hpa:
+      enabled: false
+  web:
+    keda:
+      enabled: false
+    hpa:
+      enabled: false
   # Logging configuration
   logging:
     # -- Set the log level for the application (trace, debug, info, warn, error, fatal)
@@ -58,7 +68,7 @@ langfuse:
     name: ""
 
 ingress:
-  enabled: true
+  enabled: false
   additionalLabels: {}
   annotations:
     kubernetes.io/ingress.class: nginx
