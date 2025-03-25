@@ -1,5 +1,6 @@
 # Langfuse Helm Chart Configuration
-
+global:
+  storageClass: "gp2"
 # -- Override the name for the selector labels, defaults to the chart name
 nameOverride: ""
 
