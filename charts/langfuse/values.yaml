@@ -405,7 +405,7 @@ redis:
   # Authentication configuration
   auth:
     # -- Configure the password by value or existing secret reference
-    password: ""
+    password: "PQgRqQQMjhjQxPI"
     # -- If you want to use an existing secret for the redis password, set the name of the secret here. (`redis.auth.password` will be ignored and picked up from this secret).
     existingSecret: ""
     # -- The key in the existing secret that contains the password.
