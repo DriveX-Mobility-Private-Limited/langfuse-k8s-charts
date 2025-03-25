@@ -57,25 +57,6 @@ langfuse:
     # -- Override the name of the service account to use, discovered automatically if not set
     name: ""
 
-ingress:
-  enabled: false
-  additionalLabels: {}
-  annotations:
-    kubernetes.io/ingress.class: nginx
-    kubernetes.io/tls-acme: "true"
-    cert-manager.io/cluster-issuer: letsencrypt-dev
-    nginx.ingress.kubernetes.io/use-forwarded-headers: "true"
-  # The class name for the ingress resource
-  className: "nginx"
-  # The hosts for the ingress resource
-  hosts: 
-    - host: llmmetrics.drivex.dev
-      paths:
-        - path: /
-          pathType: ImplementationSpecific
-  tls:
-    enabled: true
-    secretName: "langfuse-dev-tls"
 
   # -- Pod security context for all langfuse deployments
   podSecurityContext: {}
