@@ -337,8 +337,6 @@ langfuse:
 
 # PostgreSQL Configuration
 postgresql:
-  persistence:
-    storageClass: "gp2"
   primary:
     persistence:
       storageClass: "gp2"    
