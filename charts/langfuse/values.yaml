@@ -337,8 +337,11 @@ langfuse:
 
 # PostgreSQL Configuration
 postgresql:
-  global:
-    storageClass: "gp2"
+primary:
+  persistence:
+    enabled: true
+    storageClass: gp2
+    selector: {}
   # -- Enable PostgreSQL deployment (via Bitnami Helm Chart). If you want to use an external Postgres server (or a managed one), set this to false
   deploy: true
   
