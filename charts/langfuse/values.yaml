@@ -422,6 +422,8 @@ redis:
 
 # ClickHouse Configuration
 clickhouse:
+  persistence:
+    storageClass: "gp2"
   # -- Enable ClickHouse deployment (via Bitnami Helm Chart). If you want to use an external Clickhouse server (or a managed one), set this to false
   deploy: true
   
@@ -465,7 +467,7 @@ clickhouse:
 # S3/MinIO Configuration
 s3:
   # -- Enable MinIO deployment (via Bitnami Helm Chart). If you want to use a custom BlobStorage, e.g. S3, set to false.
-  deploy: false
+  deploy: true
 
   # -- S3 bucket to use for all uploads. Can be overridden per upload type.
   bucket: ""
@@ -474,7 +476,7 @@ s3:
   # -- S3 endpoint to use for all uploads. Can be overridden per upload type.
   endpoint: ""
   # -- Whether to force path style on requests. Required for MinIO. Can be overridden per upload type.
-  forcePathStyle: false
+  forcePathStyle: true
   # -- S3 accessKeyId to use for all uploads. Can be overridden per upload type.
   accessKeyId:
     value: ""
