@@ -61,7 +61,7 @@ langfuse:
     # -- Set to `true` to enable the ingress resource
     enabled: true
     # -- Additional labels for the ingress resource
-    additionalLabels: {}
+   additionalLabels: {}
    annotations:
     kubernetes.io/ingress.class: nginx
     kubernetes.io/tls-acme: "true"
