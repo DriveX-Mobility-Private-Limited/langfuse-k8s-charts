@@ -398,10 +398,10 @@ postgresql:
     existingSecret: "langfuse-secrets-prod"
     # -- The key in the existing secret that contains the password.
     secretKeys:
-      userPasswordKey: "DB_PASSWORD"
-      databaseKey: "DB_NAME"
+      usernameKey: username
+      userPasswordKey: password
     # -- Database name to use for Langfuse.
-    database: ""
+    database: "langfuse_prod"
     # -- Additional database connection arguments
     args: ""
   
