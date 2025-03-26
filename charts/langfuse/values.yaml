@@ -83,20 +83,18 @@ langfuse:
   securityContext: {}
   # -- Node selector for all langfuse deployments
   
-nodeSelector:
-  if-llm-workload: "true"
-# -- Tolerations for all langfuse deployments
-tolerations:
-  - key: "if-monitoring-pod"
-    operator: "Equal"
-    value: "true"
-    effect: "NoSchedule"
-  - key: "if-llm-workload"
-    operator: "Equal"
-    value: "true"
-    effect: "NoSchedule"
-# -- Affinity for all langfuse deployments
-affinity: {}
+  nodeSelector:
+    if-llm-workload: "true"
+  tolerations:
+    - key: "if-monitoring-pod"
+      operator: "Equal"
+      value: "true"
+      effect: "NoSchedule"
+    - key: "if-llm-workload"
+      operator: "Equal"
+      value: "true"
+      effect: "NoSchedule"
+  affinity: {}
   pod:
     # -- Annotations for all langfuse pods
     annotations: {}
