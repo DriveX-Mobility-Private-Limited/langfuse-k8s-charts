@@ -263,7 +263,7 @@ langfuse:
       effect: "NoSchedule"
   # Worker deployment configuration
   worker:
-      extraEnv:
+    extraEnv:
       - name: DATABASE_URL
         valueFrom:
           secretKeyRef:
