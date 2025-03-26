@@ -221,6 +221,7 @@ langfuse:
     
     # -- Adding records to /etc/hosts in the pod's network.
     hostAliases: []
+    
 
     livenessProbe:
       # -- Path to check for liveness.
@@ -249,7 +250,15 @@ langfuse:
       failureThreshold: 3
       # -- Success threshold for readinessProbe.
       successThreshold: 1
-  
+    tolerations:
+    - key: "if-monitoring-pod"
+      operator: "Equal"
+      value: "true"
+      effect: "NoSchedule"
+    - key: "if-llm-workload"
+      operator: "Equal"
+      value: "true"
+      effect: "NoSchedule"
   # Worker deployment configuration
   worker:
     image:
