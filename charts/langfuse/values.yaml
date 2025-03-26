@@ -381,6 +381,7 @@ postgresql:
     secretKeys:
       usernameKey: "DB_USERNAME"
       userPasswordKey: "DB_PASSWORD"
+      postgresPasswordKey: "POSTGRES_USER_PASSWORD"
       databaseKey: "DB_NAME"
     # -- Database name to use for Langfuse.
     database: ""
