@@ -404,6 +404,7 @@ postgresql:
     existingSecret: "langfuse-postgres-credentials"
     # -- The key in the existing secret that contains the password.
     secretKeys:
+      usernameKey: username
       userPasswordKey: password
       postgresPasswordKey: postgres-password
     # -- Database name to use for Langfuse.
