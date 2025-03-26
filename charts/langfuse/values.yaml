@@ -263,6 +263,12 @@ langfuse:
       effect: "NoSchedule"
   # Worker deployment configuration
   worker:
+      extraEnv:
+      - name: DATABASE_URL
+        valueFrom:
+          secretKeyRef:
+            name: langfuse-postgres-credentials
+            key: DATABASE_URL
     image:
       # -- The image repository to use for the langfuse worker pods
       repository: langfuse/langfuse-worker
