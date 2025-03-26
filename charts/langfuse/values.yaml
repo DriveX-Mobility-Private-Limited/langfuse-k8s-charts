@@ -375,10 +375,11 @@ postgresql:
     persistence:
       enabled: true
       size: 50Gi
+      selector: {}
   # -- PostgreSQL host to connect to. If postgresql.deploy is true, this will be set automatically based on the release name.
   host: ""
   # -- Port of the postgres server to use. Defaults to 5432.
-  port: null
+  port: 5432
   # -- Additional database connection arguments
   args: ""
 
@@ -399,10 +400,10 @@ postgresql:
     # -- The key in the existing secret that contains the password.
     secretKeys:
       # usernameKey: username
-      # userPasswordKey: password
+      userPasswordKey: password
       # postgresPasswordKey: postgres-password
     # -- Database name to use for Langfuse.
-    database: "langfuse_prod"
+    database: langfuse_prod
     # -- Additional database connection arguments
     args: ""
   
