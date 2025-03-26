@@ -503,7 +503,17 @@ clickhouse:
   replicaCount: 3
   # -- The resources preset to use for the ClickHouse cluster.
   resourcesPreset: 2xlarge
-
+  nodeSelector:
+    if-llm-workload: "true"
+  tolerations:
+    - key: "if-monitoring-pod"
+      operator: "Equal"
+      value: "true"
+      effect: "NoSchedule"
+    - key: "if-llm-workload"
+      operator: "Equal"
+      value: "true"
+      effect: "NoSchedule"
 # S3/MinIO Configuration
 s3:
   # -- Enable MinIO deployment (via Bitnami Helm Chart). If you want to use a custom BlobStorage, e.g. S3, set to false.
@@ -630,7 +640,17 @@ s3:
     existingSecret: ""
     # -- Key where the Minio root user password is being stored inside the existing secret `s3.auth.existingSecret`
     rootPasswordSecretKey: ""
-    
+  nodeSelector:
+    if-llm-workload: "true"
+  tolerations:
+    - key: "if-monitoring-pod"
+      operator: "Equal"
+      value: "true"
+      effect: "NoSchedule"
+    - key: "if-llm-workload"
+      operator: "Equal"
+      value: "true"
+      effect: "NoSchedule"    
 # Langfuse Production Configuration
 global:
   storageClass: "gp2"
