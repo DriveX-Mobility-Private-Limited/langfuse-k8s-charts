@@ -444,7 +444,7 @@ clickhouse:
   deploy: true
   persistence:
     size: 50Gi
-   logPersistence:
+  logPersistence:
     enabled: true
     size: 30Gi
   # -- ClickHouse host to connect to. If clickhouse.deploy is true, this will be set automatically based on the release name.
