@@ -489,13 +489,13 @@ s3:
   forcePathStyle: true
   # -- S3 accessKeyId to use for all uploads. Can be overridden per upload type.
   accessKeyId:
-    value: ""
+    value: "minioadmin"
     secretKeyRef:
       name: ""
       key: ""
   # -- S3 secretAccessKey to use for all uploads. Can be overridden per upload type.
   secretAccessKey:
-    value: ""
+    value: "minioadmin"
     secretKeyRef:
       name: ""
       key: ""
