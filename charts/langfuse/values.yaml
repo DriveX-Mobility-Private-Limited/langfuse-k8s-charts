@@ -394,14 +394,12 @@ postgresql:
     # -- Username to use to connect to the postgres database deployed with Langfuse. In case `postgresql.deploy` is set to `true`, the user will be created automatically.
     username: "postgres"
     # -- Password to use to connect to the postgres database deployed with Langfuse. In case `postgresql.deploy` is set to `true`, the password will be set automatically.
-    password: "HMzjkks6DA8TxSZ9HnbR"
+    password: ""
     # -- If you want to use an existing secret for the postgres password, set the name of the secret here. (`postgresql.auth.username` and `postgresql.auth.password` will be ignored and picked up from this secret).
-    existingSecret: ""
+    existingSecret: "langfuse-postgres-credentials-prod"
     # -- The key in the existing secret that contains the password.
     secretKeys:
-      # usernameKey: username
-      userPasswordKey: password
-      # postgresPasswordKey: postgres-password
+      postgresPasswordKey: "postgres-password"
     # -- Database name to use for Langfuse.
     database: langfuse_prod
     # -- Additional database connection arguments
